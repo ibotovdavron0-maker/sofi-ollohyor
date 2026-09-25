@@ -1,62 +1,267 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>So‘fi Ollohyor O‘quv markazi</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071d38">
+  <meta name="description" content="So‘fi Ollohyor O‘quv markazi — zamonaviy ta’lim, online testlar, darsliklar va o‘quvchilar natijalari.">
+  <title>So‘fi Ollohyor — O‘quv markazi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <div class="brand"><div class="logo">SO</div><div><b>So‘fi Ollohyor</b><small>O‘quv markazi</small></div></div>
-    <a class="btn small" href="#aloqa">Bog‘lanish</a>
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span>🎓 Bilim bilan buyuk kelajak sari!</span>
+      <span>📍 68-maktab binosi &nbsp; · &nbsp; 📞 +998 99 061 64 72</span>
+    </div>
   </div>
-</header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="tag">📚 ZAMONAVIY TA’LIM</span>
-      <h1>Bilim sari birga<br><span>qadam tashlaymiz</span></h1>
-      <p>Darsliklar, fanlar, imtihonlar va o‘quvchilar natijalarini bitta qulay platformada jamlaymiz.</p>
-      <div class="actions">
-        <a class="btn" href="#bolimlar">Bo‘limlarni ko‘rish</a>
-        <a class="btn ghost" href="#aloqa">Darsga yozilish</a>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="So‘fi Ollohyor">
+        <img src="assets/logo.png" alt="So‘fi Ollohyor O‘quv markazi">
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#yonalishlar">Yo‘nalishlar</a>
+        <a href="#markaz">Markaz haqida</a>
+        <a href="#imtihon">Imtihonlar</a>
+        <a href="#reyting">Reyting</a>
+        <a href="#aloqa">Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="mini-link" href="#aloqa">Kirish</a>
+        <a class="nav-cta" href="#aloqa">Darsga yozilish <span>↗</span></a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menyu">☰</button>
       </div>
     </div>
-    <div class="panel">
-      <div class="mini">📚<b>Darsliklar</b></div>
-      <div class="mini">📝<b>Imtihonlar</b></div>
-      <div class="mini">🏆<b>Reyting</b></div>
-      <div class="mini">👨‍🏫<b>O‘qituvchilar</b></div>
+  </header>
+
+  <main>
+    <section class="hero" id="markaz">
+      <div class="hero-photo"></div>
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> SO‘FI OLLOHYOR O‘QUV MARKAZI</div>
+          <h1>Bilimni <em>kuchaytirib</em>, kelajakni <span>quramiz.</span></h1>
+          <p class="hero-text">
+            Matematika, ingliz tili, tabiiy fanlar va zamonaviy IT yo‘nalishlari bo‘yicha
+            sifatli ta’lim. Dars, test, natija va reyting — bitta zamonaviy tizimda.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#yonalishlar" class="btn-primary">Yo‘nalishlarni ko‘rish <b>→</b></a>
+            <a href="#aloqa" class="btn-secondary">Bog‘lanish</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div><strong>7+</strong><span>yo‘nalish</span></div>
+            <div><strong>24/7</strong><span>online platforma</span></div>
+            <div><strong>100%</strong><span>natijaga e’tibor</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">↓ &nbsp; pastga aylantiring</div>
+    </section>
+
+    <section class="floating-services">
+      <div class="container services-grid">
+        <a href="#darsliklar" class="service-card">
+          <div class="service-icon blue">📚</div>
+          <div><strong>Darsliklar</strong><small>Materiallar va kitoblar</small></div>
+          <span>↗</span>
+        </a>
+        <a href="#imtihon" class="service-card">
+          <div class="service-icon green">📝</div>
+          <div><strong>Imtihonlar</strong><small>Online test va natija</small></div>
+          <span>↗</span>
+        </a>
+        <a href="#reyting" class="service-card">
+          <div class="service-icon gold">🏆</div>
+          <div><strong>Reyting</strong><small>O‘quvchilar ballari</small></div>
+          <span>↗</span>
+        </a>
+        <a href="#aloqa" class="service-card">
+          <div class="service-icon violet">✍️</div>
+          <div><strong>Ariza</strong><small>Darsga tez yoziling</small></div>
+          <span>↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section intro" id="darsliklar">
+      <div class="container intro-grid">
+        <div class="intro-logo-wrap">
+          <div class="glow"></div>
+          <img src="assets/logo.png" alt="So‘fi Ollohyor logotipi" class="intro-logo">
+          <div class="seal">SIFATLI TA’LIM<br><b>KELAJAK KAFOLATI</b></div>
+        </div>
+        <div class="intro-copy">
+          <span class="eyebrow">MARKAZ HAQIDA</span>
+          <h2>Oddiy dars emas — <span>tizimli ta’lim.</span></h2>
+          <p>
+            O‘quvchi darsni o‘rganadi, testni ishlaydi, natijasini ko‘radi va o‘z
+            rivojlanishini kuzatadi. Sayt va Telegram bot yagona platforma sifatida ishlashi uchun
+            barcha asosiy bo‘limlar shu dizaynga moslangan.
+          </p>
+          <div class="check-grid">
+            <div><b>✓</b> Zamonaviy darslar</div>
+            <div><b>✓</b> Online testlar</div>
+            <div><b>✓</b> Natija va reyting</div>
+            <div><b>✓</b> Darsliklar bazasi</div>
+          </div>
+          <a href="#aloqa" class="text-link">Markaz bilan bog‘lanish →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section subjects" id="yonalishlar">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">TA’LIM YO‘NALISHLARI</span>
+            <h2>O‘zingizga mos <span>fanni</span> tanlang</h2>
+          </div>
+          <p>Fanlar, sinflar, ustozlar, narxlar va jadvallar keyinchalik admin botdan avtomatik olinadi.</p>
+        </div>
+
+        <div class="subject-grid">
+          <article class="subject-card">
+            <div class="subject-top"><span>01</span><i>∑</i></div>
+            <h3>Matematika</h3>
+            <p>Algebra, geometriya, formulalar va testlarga tayyorgarlik.</p>
+            <a href="#aloqa">Batafsil →</a>
+          </article>
+          <article class="subject-card">
+            <div class="subject-top"><span>02</span><i>EN</i></div>
+            <h3>Ingliz tili</h3>
+            <p>Grammar, vocabulary, speaking va imtihonlarga tayyorgarlik.</p>
+            <a href="#aloqa">Batafsil →</a>
+          </article>
+          <article class="subject-card">
+            <div class="subject-top"><span>03</span><i>⚛</i></div>
+            <h3>Fizika</h3>
+            <p>Qonunlar, formulalar, masalalar va mustahkamlash.</p>
+            <a href="#aloqa">Batafsil →</a>
+          </article>
+          <article class="subject-card">
+            <div class="subject-top"><span>04</span><i>🌿</i></div>
+            <h3>Biologiya</h3>
+            <p>Organizmlar, tabiat va biologik jarayonlarni o‘rganish.</p>
+            <a href="#aloqa">Batafsil →</a>
+          </article>
+          <article class="subject-card">
+            <div class="subject-top"><span>05</span><i>⚗</i></div>
+            <h3>Kimyo</h3>
+            <p>Reaksiyalar, tenglamalar, nazariya va testlar.</p>
+            <a href="#aloqa">Batafsil →</a>
+          </article>
+          <article class="subject-card">
+            <div class="subject-top"><span>06</span><i>IT</i></div>
+            <h3>IT</h3>
+            <p>Kompyuter savodxonligi, raqamli ko‘nikmalar va texnologiyalar.</p>
+            <a href="#aloqa">Batafsil →</a>
+          </article>
+          <article class="subject-card subject-wide">
+            <div class="subject-wide-copy">
+              <div class="subject-top"><span>07</span><i>&lt;/&gt;</i></div>
+              <h3>Dasturlash</h3>
+              <p>Algoritmlar, kod yozish va amaliy loyihalar orqali dasturlashni o‘rganish.</p>
+              <a href="#aloqa">Batafsil →</a>
+            </div>
+            <div class="code-window" aria-hidden="true">
+              <div><span></span><span></span><span></span></div>
+              <pre>print(<b>"Kelajak uchun kod yozing"</b>)</pre>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section exam-section" id="imtihon">
+      <div class="container exam-grid">
+        <div>
+          <span class="eyebrow white">ONLINE IMTIHON TIZIMI</span>
+          <h2>Test ishlang.<br><span>Ball oling.</span><br>Natijani biling.</h2>
+          <p>
+            Bir savolga javob berganingizdan keyin u yo‘qoladi, keyingi savol chiqadi.
+            To‘g‘ri javob uchun ball va bayramona belgi ko‘rinadi — aynan Telegram botdagi
+            tajribaga mos.
+          </p>
+          <div class="exam-points">
+            <span>✓ Avtomatik hisob</span>
+            <span>✓ To‘g‘ri javob belgisi</span>
+            <span>✓ Umumiy natija</span>
+          </div>
+        </div>
+
+        <div class="quiz-card">
+          <div class="quiz-head"><span>Matematika · 5-sinf</span><b>1 / 20</b></div>
+          <div class="progress"><i></i></div>
+          <h3>12 × 8 = ?</h3>
+          <div class="quiz-option"><b>A</b> 86</div>
+          <div class="quiz-option correct"><b>B</b> 96 <span>✓</span></div>
+          <div class="quiz-option"><b>C</b> 108</div>
+          <div class="quiz-option"><b>D</b> 116</div>
+          <div class="celebrate">🎉 <strong>BARAKALLA!</strong> To‘g‘ri javob · +1 ball</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ranking-section" id="reyting">
+      <div class="container ranking-grid">
+        <div>
+          <span class="eyebrow">O‘QUVCHILAR NATIJASI</span>
+          <h2>Reyting bilan <span>rivojlanishni</span> ko‘ring.</h2>
+          <p>Test natijalari saqlanib, o‘quvchilar reytingi avtomatik yangilanadigan tizim.</p>
+          <div class="rank-stat"><strong>🏆</strong><div><b>+1 ball</b><small>har bir to‘g‘ri javob uchun</small></div></div>
+        </div>
+
+        <div class="leaderboard">
+          <div class="leader-head"><span>O‘RIN</span><span>O‘QUVCHI</span><span>BALL</span></div>
+          <div class="leader-row"><span class="place first">🥇</span><strong>1-o‘rin</strong><b>120</b></div>
+          <div class="leader-row"><span class="place">🥈</span><strong>2-o‘rin</strong><b>112</b></div>
+          <div class="leader-row"><span class="place">🥉</span><strong>3-o‘rin</strong><b>107</b></div>
+          <div class="leader-row"><span class="place number">4</span><strong>4-o‘rin</strong><b>101</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="aloqa">
+      <div class="container contact-box">
+        <div class="contact-copy">
+          <span class="eyebrow">ALOQA</span>
+          <h2>Darsga yozilish uchun <span>bog‘laning.</span></h2>
+          <p>Telefon orqali murojaat qiling yoki Telegram bot orqali ariza yuboring.</p>
+          <div class="contact-info">
+            <div><b>📞</b><span>+998 99 061 64 72</span></div>
+            <div><b>📍</b><span>68-maktab binosi</span></div>
+          </div>
+        </div>
+        <div class="contact-actions">
+          <a class="btn-primary" href="tel:+998990616472">📞 Qo‘ng‘iroq qilish</a>
+          <a class="btn-secondary" href="#yonalishlar">📚 Fanlarni ko‘rish</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.png" alt="So‘fi Ollohyor">
+      <div>© <span id="year"></span> So‘fi Ollohyor O‘quv markazi</div>
+      <div>Ta’lim • Bilim • Natija</div>
     </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="tel:+998990616472" title="Qo‘ng‘iroq">☎</a>
+    <a href="#aloqa" title="Darsga yozilish">✍</a>
   </div>
-</section>
 
-<section id="bolimlar" class="section">
-<div class="container">
-  <div class="head"><span class="tag">PLATFORMA</span><h2>Asosiy bo‘limlar</h2><p>Keyinchalik bu bo‘limlar Telegram bot va umumiy baza bilan ulanadi.</p></div>
-  <div class="cards">
-    <div class="card">📚<h3>Darsliklar</h3><p>Fan va sinf bo‘yicha darsliklar.</p></div>
-    <div class="card">📝<h3>Imtihonlar</h3><p>Online test ishlash va natijalarni ko‘rish.</p></div>
-    <div class="card">🏆<h3>O‘quvchilar reytingi</h3><p>Ballar va natijalar asosidagi reyting.</p></div>
-    <div class="card">📖<h3>Fanlar</h3><p>Markazdagi fanlar va guruhlar.</p></div>
-    <div class="card">👨‍🏫<h3>O‘qituvchilar</h3><p>Ustozlar va ularning yo‘nalishlari.</p></div>
-    <div class="card">📝<h3>Ariza topshirish</h3><p>Darsga yozilish uchun ariza yuborish.</p></div>
-  </div>
-</div>
-</section>
-
-<section class="cta">
-<div class="container cta-box"><div><span class="tag">KEYINGI BOSQICH</span><h2>Telegram bot + sayt + yagona baza</h2><p>Admin qo‘shgan ma’lumotlarni saytga ham chiqaradigan tizim.</p></div><a class="btn" href="#aloqa">Boshlash</a></div>
-</section>
-
-<section id="aloqa" class="section">
-<div class="container head"><span class="tag">ALOQA</span><h2>So‘fi Ollohyor O‘quv markazi</h2><p>Bu yerga keyin telefon, manzil va Telegram bot havolasini qo‘shamiz.</p></div>
-</section>
-
-<footer><div class="container footer"><span>© <span id="year"></span> So‘fi Ollohyor O‘quv markazi</span><span>Ta’lim • Bilim • Natija</span></div></footer>
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
