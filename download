@@ -1,0 +1,6 @@
+sofi_ollohyor.db
+admin_pdfs/
+shared_media/
+site_config.py
+__pycache__/
+*.pyc

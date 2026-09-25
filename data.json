@@ -1,0 +1,11 @@
+{
+  "updated_at": null,
+  "stats": {
+    "students": 0,
+    "teachers": 0,
+    "subjects": 0,
+    "books": 0
+  },
+  "teachers": [],
+  "ranking": []
+}
