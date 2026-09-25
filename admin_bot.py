@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 import re
 import sqlite3
 from pathlib import Path
@@ -599,8 +600,16 @@ async def teacher_save(call: CallbackQuery, state: FSMContext):
         con.commit()
     finally:
         con.close()
+    # O‘qituvchi bazaga saqlandi. Endi saytning data.json faylini ham yangilaymiz.
+    sync_ok = False
+    if sync_site_data:
+        sync_ok = await sync_site_data(DB_PATH, BASE_DIR)
+
     await state.clear()
-    await call.message.edit_text("✅ O'qituvchi saqlandi.")
+    if sync_ok:
+        await call.message.edit_text("✅ O‘qituvchi saqlandi.\n🌐 Sayt ham yangilandi.")
+    else:
+        await call.message.edit_text("✅ O‘qituvchi bazaga saqlandi.\n⚠️ Sayt hali yangilanmadi: GitHub token yoki sync sozlamasini tekshiring.")
     await call.message.answer("👑 Admin panel:", reply_markup=menu())
     await call.answer()
 
@@ -1686,21 +1695,12 @@ async def fallback(message: Message):
 
 
 async def main():
+    if not BOT_TOKEN:
+        raise RuntimeError("Admin bot tokeni topilmadi.")
     init_db()
     if sync_site_data:
         await sync_site_data(DB_PATH, BASE_DIR)  # Initial admin site sync
     bot = Bot(BOT_TOKEN)
-
-    async def periodic_site_sync():
-        while True:
-            try:
-                if sync_site_data:
-                    await sync_site_data(DB_PATH, BASE_DIR)
-            except Exception:
-                logging.exception("Periodic site sync xatosi")
-            await asyncio.sleep(60)
-
-    sync_task = asyncio.create_task(periodic_site_sync())
 
     # Oldingi versiyada file_id bo'lib qolgan rasmlar/fayllarni
     # umumiy papkaga ko'chirishga urinadi.
@@ -1714,11 +1714,6 @@ async def main():
     try:
         await dp.start_polling(bot)
     finally:
-        sync_task.cancel()
-        try:
-            await sync_task
-        except asyncio.CancelledError:
-            pass
         await bot.session.close()
 
 

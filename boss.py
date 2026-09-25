@@ -1,5 +1,4 @@
 import asyncio
-import os
 import sqlite3
 from pathlib import Path
 
@@ -684,7 +683,7 @@ async def fallback(message: Message):
 
 async def main():
     if not BOT_TOKEN:
-        raise RuntimeError("BOSS_BOT_TOKEN muhit o'zgaruvchisini kiriting.")
+        raise RuntimeError("O'quvchi bot tokeni topilmadi.")
     init_db()
     print("========================================")
     print("SO'FI OLLOHYOR O'QUVCHI BOT ISHLADI")
@@ -692,26 +691,9 @@ async def main():
     print("MEDIA:", MEDIA_DIR)
     print("========================================")
     bot = Bot(BOT_TOKEN)
-
-    async def periodic_site_sync():
-        while True:
-            try:
-                if sync_site_data:
-                    await sync_site_data(DB_PATH, BASE_DIR)
-            except Exception:
-                import logging
-                logging.exception("Periodic site sync xatosi")
-            await asyncio.sleep(60)
-
-    sync_task = asyncio.create_task(periodic_site_sync())
     try:
         await dp.start_polling(bot)
     finally:
-        sync_task.cancel()
-        try:
-            await sync_task
-        except asyncio.CancelledError:
-            pass
         await bot.session.close()
 
 

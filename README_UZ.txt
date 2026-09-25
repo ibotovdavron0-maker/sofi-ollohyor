@@ -1,12 +1,29 @@
-SOFI OLLOHYOR — BOT + SAYT TIZIMI
+SO'FI OLLOHYOR — 2 TA TELEGRAM BOT
 
-1) admin_bot.py — admin bot
-2) boss.py — o'quvchi bot
-3) site_sync.py — GitHub Pages uchun public ma'lumotlarni yangilaydi
-4) site_config.py — GitHub token shu kompyuterda saqlanadi
-5) run_bots.bat — ikkala botni alohida oynada ishga tushiradi
+Fayllar:
+  admin_bot.py  - admin bot
+  boss.py       - o'quvchi bot
+  site_sync.py  - saytga ma'lumot yuborish
+  site_config.py- GitHub sozlamasi
+  requirements.txt
+  run_bots.bat
 
-ADMIN ID: 5319789884
+ADMIN TELEGRAM ID: 5319789884
 
-MUHIM: Bot tokenlari bu faylda ishchi holatda bor. Faylni GitHub'ga yuklamang.
-GitHub tokenini GITHUB_TOKEN environment variable orqali kiriting.
+O'RNATISH:
+  python -m pip install -U -r requirements.txt
+
+ISHGA TUSHIRISH:
+  run_bots.bat
+  yoki alohida:
+  python admin_bot.py
+  python boss.py
+
+MUHIM:
+  Bot tokenlari kod ichida bor. Bu fayllarni PUBLIC GitHub repository'ga yuklamang.
+  Tokenlar oldin chatda oshkor qilingan bo'lgani uchun BotFather orqali yangilash tavsiya qilinadi.
+
+SAYT:
+  site_config.py ichidagi GITHUB_TOKEN ni GitHub Fine-grained token bilan to'ldiring.
+  Repository: ibotovdavron0-maker/sofi-ollohyor
+  Permission: Contents -> Read and write
