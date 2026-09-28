@@ -1,11 +1,16 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-09-28T10:01:52.398766+00:00",
   "stats": {
+    "users": 0,
     "students": 0,
     "teachers": 0,
     "subjects": 0,
-    "books": 0
+    "books": 0,
+    "exams": 0
   },
   "teachers": [],
+  "subjects": [],
+  "books": [],
+  "exams": [],
   "ranking": []
 }
