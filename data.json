@@ -1,14 +1,27 @@
 {
-  "updated_at": "2026-09-28T10:07:07.449081+00:00",
+  "updated_at": "2026-09-28T10:09:42.395242+00:00",
   "stats": {
     "users": 0,
     "students": 0,
-    "teachers": 0,
+    "teachers": 1,
     "subjects": 0,
     "books": 0,
     "exams": 0
   },
-  "teachers": [],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Ibotov Davron",
+      "subject": "Matematika",
+      "experience": "1 yil",
+      "education": "Denov tadbirkorlik va pedagogika instituti",
+      "certificates": "Yuq",
+      "achievements": "Hozzircha yuq",
+      "results": "Bor",
+      "description": "Davron Ibotov",
+      "photo": "site_media/teachers/5319789884_2116.jpg"
+    }
+  ],
   "subjects": [],
   "books": [],
   "exams": [],
