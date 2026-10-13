@@ -32,3 +32,15 @@ Bosh sahifa arizani Supabase `applications` jadvaliga yuboradi. Jadval va `publi
 
 ## Xavfsizlik va tekshiruv
 GitHub Pages statik hostingdir. Admin sahifasidagi har bir boshqaruv bo‘limi va diagramma real bazaga ulangan deb hisoblamang: grafiklarning bir qismi namuna ma’lumotidir, ayrim modullar alohida ulashni talab qiladi. `config.js` ichida faqat public/anon kalit ishlating; ma’lumotlarni himoya qilish Supabase RLS siyosatlariga bog‘liq.
+
+
+## Neon glass kabinet dizayni
+- `admin.html`: administrator statistikasi va Chart.js diagrammalari.
+- `dashboard.html`: o‘quvchi kabineti.
+- `teacher.html`: ustoz kabineti.
+- `cabinet-neon.css`: kabinetlar uchun ko‘k/binafsha neon shisha uslubi.
+
+### Muhim sozlash
+`config.js` ichidagi `SUPABASE_ANON_KEY` qiymatiga Supabase Dashboard → API Keys sahifasidagi **Publishable key** (`sb_publishable_...`) ni qo‘ying. `sb_secret_...` kalitini hech qachon saytga joylamang.
+
+Admin panelidagi oylik va to‘lov diagrammalari bazada tegishli haqiqiy to‘lovlar jadvali mavjud bo‘lmaguncha NAMUNAVIY ko‘rsatkich sifatida belgilangan. O‘quvchilar/ustozlar/arizalar/jadval sonlari Supabase ruxsat bersa bazadan olinadi.

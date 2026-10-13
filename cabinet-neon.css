@@ -1,0 +1,11 @@
+/* SUFIOLLOHYOR NEON GLASS CABINETS */
+:root{--bg:#050914;--panel:rgba(8,24,47,.88);--glass:rgba(13,31,58,.76);--line:rgba(63,153,255,.28);--text:#f4f8ff;--muted:#9bb2d1;--orange:#ff9d37;--cyan:#00dcff;--purple:#9a6cff;--green:#00dfad}
+body{background:radial-gradient(ellipse at 7% 10%,#004e8b33,transparent 35%),radial-gradient(ellipse at 90% 22%,#6e20c333,transparent 32%),radial-gradient(ellipse at 55% 100%,#0060a522,transparent 42%),#050914!important;color:var(--text)!important}
+.sidebar,.admin-top{background:rgba(3,9,22,.94)!important;border-color:#248aff42!important;backdrop-filter:blur(24px)}
+.brand-mark,.admin-brand-mark{background:linear-gradient(140deg,#00d5ff,#744cff 60%,#ff6bce)!important;box-shadow:0 0 26px #168dff55!important}
+.panel,.metric-card,.profile-card,.hero-panel,.admin-card{background:linear-gradient(145deg,rgba(16,42,76,.82),rgba(7,17,35,.76))!important;border:1px solid rgba(63,153,255,.28)!important;box-shadow:0 12px 34px #0003,inset 0 1px #ffffff08!important;backdrop-filter:blur(20px)}
+button,.small-button,.btn,.btn-primary{border-radius:11px!important;background:linear-gradient(120deg,#0a7cff,#654cff)!important;color:#fff!important;border:1px solid #168cff70!important;box-shadow:0 0 16px #168cff20}
+input,select,textarea{background:#06142a!important;border:1px solid rgba(63,153,255,.35)!important;color:#f4f8ff!important;border-radius:10px!important}
+.side-link,.nav-link{border-radius:11px!important}.side-link:hover,.side-link.selected,.nav-link.active{background:linear-gradient(100deg,#197cff45,#8b5cf622)!important;border-color:#318dff55!important;box-shadow:inset 3px 0 #21c9ff,0 0 18px #267bff16!important}
+h1,h2,h3{color:#f4f8ff!important}.muted,small,.subtitle{color:#9bb2d1!important}table th{color:#8edfff!important;border-color:#248aff33!important}table td{border-color:#ffffff12!important}.form-message{color:#5be8ff!important}
+@media(max-width:650px){.admin-content{padding:14px!important}.admin-top{padding:12px!important}}
