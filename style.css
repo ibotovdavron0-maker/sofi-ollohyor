@@ -389,3 +389,136 @@ button[type="submit"] {
     transition-duration: .01ms !important;
   }
   }
+
+/* SUFIOLLOHYOR — DARK GLASS DESIGN */
+:root {
+  --bg: #080a10;
+  --surface: rgba(22, 27, 39, .72);
+  --glass: rgba(255, 255, 255, .065);
+  --line: rgba(255, 255, 255, .13);
+  --text: #f4f6ff;
+  --muted: #a7afc2;
+  --orange: #ff873d;
+  --cyan: #39d9ff;
+  --purple: #a78bfa;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 12% 15%, rgba(255, 112, 43, .14), transparent 35%),
+    radial-gradient(ellipse at 88% 38%, rgba(47, 194, 255, .12), transparent 35%),
+    radial-gradient(ellipse at 50% 90%, rgba(139, 92, 246, .10), transparent 38%),
+    var(--bg);
+}
+
+body, button, input, select, textarea {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  transition: color .25s ease, opacity .25s ease;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+header, .header, nav, .navbar {
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+header, .header {
+  background: rgba(9, 12, 19, .78);
+  border-bottom: 1px solid var(--line);
+}
+
+section, .hero-panel, .panel, .card, .stat-card,
+.course-card, .glass-card, .dashboard-card,
+form, .modal-content {
+  border-color: var(--line);
+}
+
+.hero-panel, .panel, .card, .stat-card,
+.course-card, .glass-card, .dashboard-card,
+.modal-content {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 12px 38px rgba(0, 0, 0, .20);
+  transition: transform .25s ease, border-color .25s ease,
+              box-shadow .25s ease;
+}
+
+.card:hover, .course-card:hover, .glass-card:hover,
+.dashboard-card:hover, .stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 135, 61, .45);
+  box-shadow: 0 14px 35px rgba(255, 112, 43, .08);
+}
+
+button, .primary, .btn-primary, a.primary {
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+button:hover, .primary:hover, .btn-primary:hover {
+  box-shadow: 0 0 24px rgba(255, 135, 61, .25);
+}
+
+input, select, textarea {
+  color: var(--text);
+  background: rgba(255, 255, 255, .055);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid rgba(57, 217, 255, .45);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@keyframes glassFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main section {
+  animation: glassFadeIn .55s ease both;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .hero-panel, .panel, .card, .course-card,
+  .glass-card, .dashboard-card, .stat-card {
+    border-radius: 16px;
+  }
+
+  button, .primary, .btn-primary {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
