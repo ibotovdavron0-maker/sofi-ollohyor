@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin panel | Sufiollohyor</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #10151f;
+      color: white;
+    }
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+    }
+    .panel {
+      padding: 22px;
+      margin: 15px 0;
+      border: 1px solid #ffffff35;
+      border-radius: 16px;
+      background: #ffffff0d;
+    }
+    a, button {
+      display: inline-block;
+      margin: 6px 4px 6px 0;
+      padding: 12px 16px;
+      border-radius: 9px;
+      border: 0;
+      background: #f28c28;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>🛡️ Administrator paneli</h1>
+    <p>Sufiollohyor o‘quv markazi boshqaruvi</p>
+
+    <section class="panel">
+      <h2>Boshqaruv bo‘limlari</h2>
+      <p>Quyidagi sahifalar keyingi bosqichlarda ulanadi.</p>
+      <a href="index.html">Bosh sahifa</a>
+      <a href="courses.html">Kurslar</a>
+      <a href="schedule.html">Dars jadvali</a>
+      <a href="ranking.html">O‘quvchilar reytingi</a>
+    </section>
+
+    <section class="panel">
+      <h2>Administrator hisobi</h2>
+      <p>Bu sahifa hozircha boshlang‘ich ko‘rinishdir.</p>
+      <button id="logout">Tizimdan chiqish</button>
+      <p id="message"></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script>
+    const message = document.getElementById('message');
+
+    document.getElementById('logout').addEventListener('click', async () => {
+      try {
+        const config = window.SUFIOLLOHYOR_CONFIG;
+        const client = window.supabase.createClient(
+          config.SUPABASE_URL,
+          config.SUPABASE_ANON_KEY
+        );
+        const { error } = await client.auth.signOut();
+        if (error) throw error;
+        location.href = 'login.html';
+      } catch (error) {
+        message.textContent = 'Xatolik: ' + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
