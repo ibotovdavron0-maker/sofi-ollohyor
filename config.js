@@ -1,4 +1,4 @@
 window.SUFIOLLOHYOR_CONFIG = {
   SUPABASE_URL: "https://oteokizwakceztwrocol.supabase.co",
-  SUPABASE_ANON_KEY: "sb_publishable_grAALEVaJmy54E6kqLiNyg_QOaq4GOg"
+  SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im90ZW9raXp3YWtjZXp0d3JvY29sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTE5MDA5NzIsImV4cCI6MjEwNzQ3Njk3Mn0.auxAEfvLfvJKl9s2fm5NtnnV1XfcHDtC95OSLmQObk0"
 };
