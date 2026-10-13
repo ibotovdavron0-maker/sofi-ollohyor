@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kirish | So‘fi Ollohyor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main style="max-width:420px;margin:60px auto;padding:24px">
+    <h1>Shaxsiy kabinetga kirish</h1>
+    <p>Email va parolingizni kiriting.</p>
+
+    <form id="loginForm">
+      <label>Email manzil
+        <input id="email" type="email" required
+          placeholder="email@example.com">
+      </label>
+      <br><br>
+      <label>Parol
+        <input id="password" type="password" required
+          placeholder="Parolingiz">
+      </label>
+      <br><br>
+      <button type="submit">Kirish</button>
+      <p id="message"></p>
+    </form>
+
+    <p>Hisobingiz yo‘qmi?
+      <a href="register.html">Ro‘yxatdan o‘tish</a>
+    </p>
+    <a href="index.html">← Bosh sahifaga qaytish</a>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script>
+    const form = document.getElementById('loginForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      message.textContent = 'Tekshirilmoqda...';
+
+      try {
+        const client = window.supabase.createClient(
+          window.SUFIOLLOYOR_CONFIG.SUPABASE_URL,
+          window.SUFIOLLOYOR_CONFIG.SUPABASE_ANON_KEY
+        );
+
+        const { data, error } = await client.auth.signInWithPassword({
+          email: document.getElementById('email').value.trim(),
+          password: document.getElementById('password').value
+        });
+
+        if (error) throw error;
+
+        const { data: profile, error: profileError } = await client
+          .from('profiles')
+          .select('role')
+          .eq('id', data.user.id)
+          .single();
+
+        if (profileError) throw profileError;
+
+        if (profile.role === 'admin') {
+          location.href = 'admin.html';
+        } else if (profile.role === 'teacher') {
+          location.href = 'teacher.html';
+        } else {
+          location.href = 'dashboard.html';
+        }
+      } catch (error) {
+        message.textContent = 'Kirish xatosi: ' + error.message;
+      }
+    });
+  </script>
+</body>
+</html>
