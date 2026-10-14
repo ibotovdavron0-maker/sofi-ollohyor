@@ -1,3 +1,220 @@
-<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050b19"><title>Administrator | Sufiollohyor</title><link rel="stylesheet" href="neon.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head><body><div class="app"><aside class="sidebar" id="sidebar"><div class="brand"><div class="logo">♨</div><div><b>SUFIOLLOHYOR</b><small>O‘QUV MARKAZI</small></div></div><div class="nav-title">BOSHQARUV</div><nav class="nav"><a class="active" href="admin.html"><span class="ico">⌂</span>Bosh sahifa</a><a href="admin-students.html"><span class="ico">♙</span>O‘quvchilar</a><a href="admin-teachers.html"><span class="ico">♧</span>O‘qituvchilar</a><a href="admin-groups.html"><span class="ico">▦</span>Guruhlar</a><a href="admin-courses.html"><span class="ico">▣</span>Kurslar</a><a href="admin-schedule.html"><span class="ico">◷</span>Darslar</a><a href="admin-attendance.html"><span class="ico">☑</span>Davomat</a><a href="admin-homework.html"><span class="ico">✎</span>Topshiriqlar</a><a href="admin-tests.html"><span class="ico">▤</span>Testlar</a><a href="admin-results.html"><span class="ico">◉</span>Natijalar</a><a href="admin-payments.html"><span class="ico">◇</span>To‘lovlar</a><a href="admin-applications.html"><span class="ico">✉</span>Arizalar</a><a href="admin-news.html"><span class="ico">▧</span>Xabarlar</a><a href="admin-settings.html"><span class="ico">⚙</span>Sozlamalar</a></nav><div class="nav-bottom nav"><a href="index.html"><span class="ico">↗</span>Saytni ko‘rish</a><button id="logout"><span class="ico">⇥</span>Tizimdan chiqish</button></div></aside><main class="main"><header class="topbar"><button class="roundbtn mobiletoggle" id="menuToggle">☰</button><div class="search"><input id="searchInput" placeholder="Qidirish..." type="search"></div><div class="spacer"></div><button class="roundbtn" id="refresh">↻</button><button class="roundbtn" title="Bildirishnomalar">♧</button><div class="user"><div class="avatar">SO</div><div class="usertext"><b>Administrator</b><small id="adminEmail">Sufiollohyor markazi</small></div></div></header><section class="welcome"><div><div class="eyebrow">BOSHQARUV MARKAZI</div><h1>Xush kelibsiz, Admin!</h1><div class="sub">Sufiollohyor o‘quv markazi boshqaruv paneli</div></div><span class="tag" id="today">Bugun</span></section><section class="stats"><article class="glass stat" style="--glow:#238cff"><div class="stat-head">O‘quvchilar <span class="stat-icon">♙</span></div><div class="stat-num" id="studentsCount">1,550</div><div class="stat-foot"><span class="up">↗ +12%</span> o‘tgan oyga nisbatan</div></article><article class="glass stat" style="--glow:#16d9f4"><div class="stat-head">O‘qituvchilar <span class="stat-icon">♧</span></div><div class="stat-num" id="teachersCount">200</div><div class="stat-foot"><span class="up">↗ +5%</span> o‘tgan oyga nisbatan</div></article><article class="glass stat" style="--glow:#ed58b4"><div class="stat-head">Kurslar <span class="stat-icon">▣</span></div><div class="stat-num" id="coursesCount">35</div><div class="stat-foot"><span class="up">↗ +8%</span> faol kurslar</div></article><article class="glass stat" style="--glow:#13d6a0"><div class="stat-head">Faol guruhlar <span class="stat-icon">▦</span></div><div class="stat-num" id="groupsCount">90</div><div class="stat-foot"><span class="up">↗ +4%</span> faol guruhlar</div></article></section><section class="grid"><article class="glass panel"><div class="panelhead"><div><h2>O‘quvchilar statistikasi</h2><div class="hint">Oylar bo‘yicha o‘sish</div></div><span class="tag">2026-yil</span></div><div class="chart"><canvas id="growth"></canvas></div></article><article class="glass panel"><div class="panelhead"><div><h2>To‘lovlar holati</h2><div class="hint">To‘lovlar taqsimoti</div></div><span class="tag">Umumiy</span></div><div class="chart"><canvas id="payments"></canvas></div><div class="legend"><span><i class="dot" style="background:#278cff"></i>To‘langan 85%</span><span><i class="dot" style="background:#9c5cff"></i>Kutilmoqda 10%</span><span><i class="dot" style="background:#ff9c37"></i>Kechikkan 5%</span></div></article></section><section class="grid"><article class="glass panel"><div class="panelhead"><div><h2>Kurslar bo‘yicha o‘quvchilar</h2><div class="hint">Yo‘nalishlar kesimida</div></div><span class="tag">Statistika</span></div><div class="chart"><canvas id="courses"></canvas></div></article><article class="glass panel"><div class="panelhead"><div><h2>So‘nggi arizalar</h2><div class="hint">Yangi kelgan murojaatlar</div></div><a class="tag" href="admin-applications.html">Barchasi →</a></div><div class="activity"><div class="activityrow"><div class="miniavatar">AS</div><div class="acttext"><b>Aliyev Samandar</b><small>Matematika kursi · 2 daqiqa oldin</small></div><span class="badge">Yangi</span></div><div class="activityrow"><div class="miniavatar">KD</div><div class="acttext"><b>Karimova Dildora</b><small>Ingliz tili kursi · 15 daqiqa oldin</small></div><span class="badge wait">Ko‘rilmoqda</span></div><div class="activityrow"><div class="miniavatar">TA</div><div class="acttext"><b>To‘xtayev Aziz</b><small>Informatika kursi · 1 soat oldin</small></div><span class="badge">Tasdiqlangan</span></div></div></article></section><section class="grid equal"><article class="glass panel"><div class="panelhead"><div><h2>Tezkor boshqaruv</h2><div class="hint">Asosiy bo‘limlarga o‘tish</div></div></div><div class="quickgrid"><a class="quick" href="admin-students.html"><span>♙</span><b>O‘quvchilar</b><small>Ro‘yxatni boshqarish</small></a><a class="quick" href="admin-teachers.html"><span>♧</span><b>O‘qituvchilar</b><small>Ustozlar ro‘yxati</small></a><a class="quick" href="admin-applications.html"><span>✉</span><b>Arizalar</b><small>Murojaatlarni ko‘rish</small></a><a class="quick" href="admin-schedule.html"><span>▦</span><b>Dars jadvali</b><small>Darslarni rejalash</small></a><a class="quick" href="admin-rankings.html"><span>♛</span><b>Reyting</b><small>Natijalar</small></a><a class="quick" href="index.html"><span>⌂</span><b>Bosh sahifa</b><small>Saytni ko‘rish</small></a></div></article><article class="glass panel"><div class="panelhead"><div><h2>Tizim holati</h2><div class="hint">Ulanish diagnostikasi</div></div><span class="tag">Holat</span></div><div class="activity"><div class="activityrow"><div class="miniavatar">◉</div><div class="acttext"><b>Sayt dizayni</b><small>Neon glass uslubi yuklandi</small></div><span class="badge">Tayyor</span></div><div class="activityrow"><div class="miniavatar">DB</div><div class="acttext"><b>Supabase bazasi</b><small id="dbStatus">Sozlamalar tekshirilmoqda</small></div><span class="badge wait" id="dbBadge">Tekshiruv</span></div><div class="activityrow"><div class="miniavatar">↗</div><div class="acttext"><b>Diagrammalar</b><small>Grafiklar namuna ma’lumotlarida</small></div><span class="badge">Faol</span></div></div><p class="hint">Eslatma: statistik raqamlar namuna. Haqiqiy ko‘rsatkichlar uchun Supabase jadvallari va ruxsatlari ulanishi kerak.</p></article></section><div class="footer">SO‘FI OLLOHYOR O‘QUV MARKAZI · ADMIN CONSOLE</div></main></div><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script>
-const $=s=>document.querySelector(s);$('#menuToggle').onclick=()=>$('#sidebar').classList.toggle('open');$('#refresh').onclick=()=>location.reload();$('#today').textContent=new Date().toLocaleDateString('uz-UZ',{day:'numeric',month:'long',year:'numeric'});if(window.Chart){Chart.defaults.color='#9aafce';Chart.defaults.font.family='Inter';Chart.defaults.font.size=10;Chart.defaults.plugins.legend.display=false;const common={responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},ticks:{color:'#9aafce'},border:{display:false}},y:{beginAtZero:true,grid:{color:'#ffffff10'},border:{display:false},ticks:{maxTicksLimit:5}}}};new Chart($('#growth'),{type:'bar',data:{labels:['Yan','Fev','Mar','Apr','May','Iyn','Iyl','Avg','Sen','Okt','Noy','Dek'],datasets:[{data:[12,17,18,23,20,29,16,28,35,30,38,44],backgroundColor:['#6b56ff','#6b56ff','#7c55ff','#7c55ff','#16baff','#278cff','#16baff','#278cff','#16baff','#278cff','#16baff','#278cff'],borderRadius:5,barPercentage:.58}]},options:common});new Chart($('#payments'),{type:'doughnut',data:{labels:['To‘langan','Kutilmoqda','Kechikkan'],datasets:[{data:[85,10,5],backgroundColor:['#16d9f4','#9c5cff','#ff9c37'],borderColor:'#09162b',borderWidth:4,hoverOffset:5}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%'}});new Chart($('#courses'),{type:'line',data:{labels:['Matematika','Informatika','Ingliz tili','Fizika','Kimyo','Biologiya'],datasets:[{data:[190,140,250,180,230,290],borderColor:'#16d9f4',backgroundColor:'rgba(22,217,244,.12)',fill:true,tension:.4,pointRadius:2},{data:[130,180,120,210,170,230],borderColor:'#9c5cff',backgroundColor:'rgba(156,92,255,.08)',fill:true,tension:.4,pointRadius:2}]},options:common})}try{const c=window.SUFIOLLOHYOR_CONFIG;if(c?.SUPABASE_URL&&c?.SUPABASE_ANON_KEY&&!c.SUPABASE_ANON_KEY.includes('PASTE_'))$('#dbStatus').textContent='Konfiguratsiya mavjud; RLS tekshiruvi talab qilinadi';else $('#dbStatus').textContent='config.js ichiga publishable kalit kiriting'}catch(e){}$('#logout').onclick=async()=>{try{if(window.supabase&&window.SUFIOLLOHYOR_CONFIG){const c=window.SUFIOLLOHYOR_CONFIG;await window.supabase.createClient(c.SUPABASE_URL,c.SUPABASE_ANON_KEY).auth.signOut()}location.href='login.html'}catch(e){alert('Chiqish: '+e.message)}};$('#searchInput').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('.nav a,.quick').forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q)||!q?'':'none')});
-</script></body></html>
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b19">
+  <title>Administrator | Sufiollohyor</title>
+  <link rel="stylesheet" href="neon.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* neon.css bo'lmasa ham sahifa o'qiladigan bo'lishi uchun */
+    :root{color-scheme:dark;--bg:#050b19;--panel:rgba(10,25,49,.82);--line:#254568;--text:#f2f7ff;--muted:#9aafce;--blue:#278cff;--cyan:#16d9f4;--purple:#9c5cff;--orange:#ff9c37;--green:#13d6a0}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#17336b 0,transparent 38%),radial-gradient(ellipse at 0% 70%,#24134b 0,transparent 42%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;min-height:100vh}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
+    .app{min-height:100vh}.sidebar{position:fixed;inset:0 auto 0 0;width:245px;padding:22px 14px;background:rgba(4,10,24,.94);border-right:1px solid #254568;backdrop-filter:blur(18px);z-index:20;display:flex;flex-direction:column;overflow:auto}
+    .brand{display:flex;align-items:center;gap:11px;padding:4px 8px 28px}.logo{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#ffd16d,#ff7b25);color:#071226;font-size:24px;box-shadow:0 0 25px #ff9c3740}.brand b{display:block;font-size:13px;letter-spacing:.5px}.brand small{display:block;color:var(--muted);font-size:10px;margin-top:4px}.nav-title{font-size:10px;letter-spacing:2px;color:#6f89ad;padding:0 12px 10px}.nav{display:grid;gap:5px}.nav a,.nav button{display:flex;align-items:center;gap:12px;width:100%;padding:11px 12px;border:1px solid transparent;border-radius:11px;background:transparent;color:#b8c9e3;text-align:left;font-size:12px}.nav a:hover,.nav a.active,.nav button:hover{background:linear-gradient(100deg,#278cff35,#9c5cff18);border-color:#278cff55;color:white}.ico{width:22px;text-align:center;font-size:17px}.nav-bottom{margin-top:auto;padding-top:20px}
+    .main{margin-left:245px;min-width:0;padding:24px 26px 36px}.topbar{display:flex;align-items:center;gap:12px;margin-bottom:28px}.search{max-width:360px;flex:1}.search input{width:100%;border:1px solid var(--line);border-radius:13px;background:#0a1930;color:white;padding:12px 15px;outline:none}.search input:focus{border-color:var(--cyan)}.spacer{flex:1}.roundbtn{border:1px solid var(--line);border-radius:12px;background:#0d1c34;color:white;padding:10px 13px}.user{display:flex;align-items:center;gap:9px;margin-left:4px}.avatar{width:39px;height:39px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,#278cff,#9c5cff)}.usertext b,.usertext small{display:block}.usertext b{font-size:12px}.usertext small{font-size:10px;color:var(--muted);margin-top:4px}.mobiletoggle{display:none}
+    .welcome{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;margin-bottom:22px}.eyebrow{font-size:10px;letter-spacing:2.5px;color:var(--cyan);font-weight:800}.welcome h1{font-size:clamp(23px,3vw,34px);margin:9px 0}.sub,.hint{color:var(--muted);font-size:12px;line-height:1.6}.tag{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:7px 10px;color:#b7cae5;font-size:10px;white-space:nowrap;background:#0a1930}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:17px}.glass{background:linear-gradient(145deg,rgba(20,43,76,.88),rgba(7,17,35,.85));border:1px solid #254568;border-radius:17px;box-shadow:0 12px 35px #0002;backdrop-filter:blur(18px)}.stat{padding:17px;position:relative;overflow:hidden}.stat:after{content:"";position:absolute;right:-25px;top:-35px;width:90px;height:90px;border-radius:50%;background:var(--glow,var(--blue));filter:blur(45px);opacity:.28}.stat-head{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#c4d3e9;font-size:12px}.stat-icon{width:33px;height:33px;border-radius:10px;display:grid;place-items:center;background:#ffffff0b;font-size:18px}.stat-num{font-size:clamp(23px,2.4vw,32px);font-weight:800;margin:16px 0 7px}.stat-foot{font-size:10px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px;margin-bottom:15px}.panel{padding:18px;min-width:0}.panelhead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:16px}.panel h2{font-size:14px;margin:0 0 5px}.chart{height:235px;position:relative}.chart canvas{max-width:100%;max-height:100%}.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;color:var(--muted);font-size:10px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px}.activity{display:grid}.activityrow{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #ffffff12;min-width:0}.activityrow:last-child{border-bottom:0}.miniavatar{flex:0 0 36px;width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#278cff22;color:white;font-size:11px;font-weight:700}.acttext{flex:1;min-width:0}.acttext b,.acttext small{display:block;overflow-wrap:anywhere}.acttext b{font-size:12px}.acttext small{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.5}.badge{font-size:10px;padding:6px 9px;border-radius:20px;background:#13d6a022;color:var(--green);white-space:nowrap}.badge.wait{background:#ff9c3722;color:#ffb45e}.quickgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.quick{display:block;padding:13px;border:1px solid var(--line);border-radius:12px;background:#0a1930;transition:.2s}.quick:hover{transform:translateY(-2px);border-color:var(--cyan)}.quick span,.quick b,.quick small{display:block}.quick span{font-size:19px;margin-bottom:8px}.quick b{font-size:11px}.quick small{font-size:9px;color:var(--muted);margin-top:5px}.live-note{font-size:11px;color:var(--muted);line-height:1.6;margin-top:12px}.error-note{color:#ffb45e!important}.empty-state{padding:20px 4px;text-align:center;color:var(--muted);font-size:12px}.footer{text-align:center;padding:22px 0 0;color:#6f89ad;font-size:10px}
+    @media(max-width:1050px){.sidebar{width:215px}.main{margin-left:215px;padding:20px 16px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}}
+    @media(max-width:650px){.sidebar{width:250px;transform:translateX(-105%);transition:transform .22s}.sidebar.open{transform:translateX(0)}.main{margin-left:0;padding:14px 12px 28px}.mobiletoggle{display:inline-block}.topbar{gap:7px;margin-bottom:22px}.search{max-width:none}.usertext{display:none}.welcome{align-items:flex-start}.stats{gap:9px}.stat{padding:13px}.stat-head{font-size:10px}.stat-num{font-size:24px}.panel{padding:14px}.chart{height:210px}.quickgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.tag{font-size:9px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo">♨</div><div><b>SUFIOLLOHYOR</b><small>O‘QUV MARKAZI</small></div></div>
+    <div class="nav-title">BOSHQARUV</div>
+    <nav class="nav" id="sideNav">
+      <a class="active" href="admin.html"><span class="ico">⌂</span>Bosh sahifa</a>
+      <a href="admin-students.html"><span class="ico">♙</span>O‘quvchilar</a>
+      <a href="admin-teachers.html"><span class="ico">♧</span>O‘qituvchilar</a>
+      <a href="admin-groups.html"><span class="ico">▦</span>Guruhlar</a>
+      <a href="admin-courses.html"><span class="ico">▣</span>Kurslar</a>
+      <a href="admin-schedule.html"><span class="ico">◷</span>Darslar</a>
+      <a href="admin-attendance.html"><span class="ico">☑</span>Davomat</a>
+      <a href="admin-homework.html"><span class="ico">✎</span>Topshiriqlar</a>
+      <a href="admin-tests.html"><span class="ico">▤</span>Testlar</a>
+      <a href="admin-results.html"><span class="ico">◉</span>Natijalar</a>
+      <a href="admin-payments.html"><span class="ico">◇</span>To‘lovlar</a>
+      <a href="admin-applications.html"><span class="ico">✉</span>Arizalar</a>
+      <a href="admin-news.html"><span class="ico">▧</span>Xabarlar</a>
+      <a href="admin-settings.html"><span class="ico">⚙</span>Sozlamalar</a>
+    </nav>
+    <div class="nav nav-bottom"><a href="index.html"><span class="ico">↗</span>Saytni ko‘rish</a><button id="logout"><span class="ico">⇥</span>Tizimdan chiqish</button></div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button class="roundbtn mobiletoggle" id="menuToggle" aria-label="Menyuni ochish">☰</button>
+      <div class="search"><input id="searchInput" placeholder="Menyudan qidirish..." type="search"></div><div class="spacer"></div>
+      <button class="roundbtn" id="refresh" title="Yangilash">↻</button>
+      <div class="user"><div class="avatar">SO</div><div class="usertext"><b>Administrator</b><small id="adminEmail">Sufiollohyor markazi</small></div></div>
+    </header>
+    <section class="welcome"><div><div class="eyebrow">BOSHQARUV MARKAZI</div><h1>Xush kelibsiz, Admin!</h1><div class="sub">Sufiollohyor o‘quv markazi boshqaruv paneli</div></div><span class="tag" id="today">Bugun</span></section>
+    <section class="stats">
+      <article class="glass stat" style="--glow:#238cff"><div class="stat-head">O‘quvchilar <span class="stat-icon">♙</span></div><div class="stat-num" id="studentsCount">—</div><div class="stat-foot">Bazadan olingan son</div></article>
+      <article class="glass stat" style="--glow:#16d9f4"><div class="stat-head">O‘qituvchilar <span class="stat-icon">♧</span></div><div class="stat-num" id="teachersCount">—</div><div class="stat-foot">Bazadan olingan son</div></article>
+      <article class="glass stat" style="--glow:#ed58b4"><div class="stat-head">Arizalar <span class="stat-icon">✉</span></div><div class="stat-num" id="applicationsCount">—</div><div class="stat-foot">Jami kelgan arizalar</div></article>
+      <article class="glass stat" style="--glow:#13d6a0"><div class="stat-head">Dars jadvali <span class="stat-icon">▦</span></div><div class="stat-num" id="scheduleCount">—</div><div class="stat-foot">Jadval yozuvlari</div></article>
+    </section>
+    <section class="grid">
+      <article class="glass panel"><div class="panelhead"><div><h2>O‘quvchilar statistikasi</h2><div class="hint">Oylar bo‘yicha namunaviy grafik</div></div><span class="tag">NAMUNA</span></div><div class="chart"><canvas id="growth" aria-label="Namunaviy oylik grafik"></canvas></div><p class="live-note">Hozircha tarixiy oylik statistika jadvali mavjud emas; grafik namuna sifatida ko‘rsatiladi.</p></article>
+      <article class="glass panel"><div class="panelhead"><div><h2>Ma’lumotlar bazasi holati</h2><div class="hint">Jadvallarga ulanish tekshiruvi</div></div><span class="tag" id="dbBadge">Tekshirilmoqda</span></div>
+        <div class="activity">
+          <div class="activityrow"><div class="miniavatar">DB</div><div class="acttext"><b>Supabase</b><small id="dbStatus">Ulanish tekshirilmoqda...</small></div></div>
+          <div class="activityrow"><div class="miniavatar">♙</div><div class="acttext"><b>profiles jadvali</b><small id="profilesStatus">Tekshirilmoqda...</small></div></div>
+          <div class="activityrow"><div class="miniavatar">✉</div><div class="acttext"><b>applications jadvali</b><small id="applicationsStatus">Tekshirilmoqda...</small></div></div>
+          <div class="activityrow"><div class="miniavatar">▦</div><div class="acttext"><b>schedule_items jadvali</b><small id="scheduleStatus">Tekshirilmoqda...</small></div></div>
+        </div><p class="live-note" id="notice">Ma’lumotlar yuklanmoqda...</p>
+      </article>
+    </section>
+    <section class="grid">
+      <article class="glass panel"><div class="panelhead"><div><h2>So‘nggi arizalar</h2><div class="hint">Supabase jadvalidan olingan yozuvlar</div></div><a class="tag" href="admin-applications.html">Barchasi →</a></div><div class="activity" id="applicationList"><div class="empty-state">Arizalar yuklanmoqda...</div></div></article>
+      <article class="glass panel"><div class="panelhead"><div><h2>Tezkor boshqaruv</h2><div class="hint">Asosiy bo‘limlarga o‘tish</div></div></div><div class="quickgrid">
+        <a class="quick" href="admin-students.html"><span>♙</span><b>O‘quvchilar</b><small>Ro‘yxatni boshqarish</small></a>
+        <a class="quick" href="admin-teachers.html"><span>♧</span><b>O‘qituvchilar</b><small>Ustozlar ro‘yxati</small></a>
+        <a class="quick" href="admin-applications.html"><span>✉</span><b>Arizalar</b><small>Murojaatlarni ko‘rish</small></a>
+        <a class="quick" href="admin-schedule.html"><span>▦</span><b>Dars jadvali</b><small>Darslarni rejalash</small></a>
+        <a class="quick" href="admin-rankings.html"><span>♛</span><b>Reyting</b><small>Natijalar</small></a>
+        <a class="quick" href="index.html"><span>⌂</span><b>Bosh sahifa</b><small>Saytni ko‘rish</small></a>
+      </div></article>
+    </section>
+    <div class="footer">SO‘FI OLLOHYOR O‘QUV MARKAZI · ADMIN CONSOLE</div>
+  </main>
+</div>
+<script>
+(() => {
+  'use strict';
+  const $ = (selector) => document.querySelector(selector);
+  const put = (selector, value) => { const el = $(selector); if (el) el.textContent = String(value); };
+  const errText = (err) => err && err.message ? err.message : 'Noma’lum xatolik';
+  const showError = (selector, err) => { put(selector, 'Xatolik: ' + errText(err)); $(selector)?.classList.add('error-note'); };
+
+  $('#menuToggle')?.addEventListener('click', () => $('#sidebar')?.classList.toggle('open'));
+  $('#refresh')?.addEventListener('click', () => location.reload());
+  put('#today', new Date().toLocaleDateString('uz-UZ', {day:'numeric', month:'long', year:'numeric'}));
+  $('#searchInput')?.addEventListener('input', (event) => {
+    const query = event.target.value.toLowerCase().trim();
+    document.querySelectorAll('#sideNav a, .quick').forEach((link) => {
+      link.style.display = (!query || link.textContent.toLowerCase().includes(query)) ? '' : 'none';
+    });
+  });
+
+  if (window.Chart && $('#growth')) {
+    Chart.defaults.color = '#9aafce';
+    Chart.defaults.font.family = 'Inter, Arial, sans-serif';
+    Chart.defaults.font.size = 10;
+    new Chart($('#growth'), {
+      type: 'bar',
+      data: {
+        labels: ['Yan','Fev','Mar','Apr','May','Iyn','Iyl','Avg','Sen','Okt','Noy','Dek'],
+        datasets: [{label:'Namunaviy qiymat', data:[12,17,18,23,20,29,16,28,35,30,38,44], backgroundColor:'#278cff', borderRadius:5, barPercentage:.58}]
+      },
+      options: {responsive:true, maintainAspectRatio:false, plugins:{legend:{display:false}}, scales:{
+        x:{grid:{display:false},border:{display:false}},
+        y:{beginAtZero:true,grid:{color:'#ffffff10'},border:{display:false},ticks:{maxTicksLimit:5}}
+      }}
+    });
+  }
+
+  async function loadDashboard() {
+    const config = window.SUFIOLLOHYOR_CONFIG;
+    if (!window.supabase || !config || !config.SUPABASE_URL || !config.SUPABASE_ANON_KEY || String(config.SUPABASE_ANON_KEY).startsWith('PASTE_')) {
+      put('#dbBadge','Sozlash kerak');
+      put('#dbStatus','config.js yoki publishable kalit topilmadi');
+      put('#notice','config.js faylida Supabase URL va publishable kalit bo‘lishi kerak. sb_secret kalitini brauzerga joylamang.');
+      ['#profilesStatus','#applicationsStatus','#scheduleStatus'].forEach(s => put(s,'Konfiguratsiya yo‘q'));
+      $('#applicationList').innerHTML = '<div class="empty-state error-note">Supabase sozlamalarini tekshiring.</div>';
+      return;
+    }
+    const client = window.supabase.createClient(config.SUPABASE_URL, config.SUPABASE_ANON_KEY);
+    try {
+      const {data:{session}} = await client.auth.getSession();
+      if (session?.user?.email) put('#adminEmail', session.user.email);
+      put('#dbStatus','Supabase bilan aloqa bor');
+      put('#dbBadge','Ulandi');
+    } catch (error) {
+      showError('#dbStatus', error);
+      put('#dbBadge','Xatolik');
+    }
+
+    // Rollar loyihadagi yozuvlarga mos: talaba va ustoz.
+    try {
+      const {data, error} = await client.from('profiles').select('id, role');
+      if (error) throw error;
+      const rows = data || [];
+      const role = value => String(value || '').trim().toLowerCase().replaceAll('‘',"'").replaceAll('ʻ',"'");
+      const students = rows.filter(row => ['talaba','student','oquvchi',"o'quvchi"].includes(role(row.role))).length;
+      const teachers = rows.filter(row => ['ustoz','teacher',"o'qituvchi",'oqituvchi'].includes(role(row.role))).length;
+      put('#studentsCount', students);
+      put('#teachersCount', teachers);
+      put('#profilesStatus', 'O‘qish muvaffaqiyatli: ' + rows.length + ' profil');
+    } catch (error) {
+      put('#studentsCount','—'); put('#teachersCount','—');
+      showError('#profilesStatus', error);
+    }
+
+    try {
+      const {data, error, count} = await client.from('applications')
+        .select('id, full_name, phone, course, message, created_at', {count:'exact'})
+        .order('created_at', {ascending:false}).limit(5);
+      if (error) throw error;
+      const applications = data || [];
+      put('#applicationsCount', count ?? applications.length);
+      put('#applicationsStatus', 'Ulandi: ' + (count ?? applications.length) + ' ta ariza');
+      const list = $('#applicationList');
+      list.replaceChildren();
+      if (!applications.length) {
+        list.innerHTML = '<div class="empty-state">Hozircha ariza kelmagan.</div>';
+      } else {
+        applications.forEach((item) => {
+          const row = document.createElement('div'); row.className = 'activityrow';
+          const avatar = document.createElement('div'); avatar.className = 'miniavatar';
+          avatar.textContent = String(item.full_name || 'A').trim().split(/\s+/).slice(0,2).map(part => part.charAt(0)).join('').toUpperCase();
+          const info = document.createElement('div'); info.className = 'acttext';
+          const name = document.createElement('b'); name.textContent = item.full_name || 'Ism kiritilmagan';
+          const details = document.createElement('small');
+          const parts = [item.course || 'Kurs ko‘rsatilmagan', item.phone || 'Telefon yo‘q'];
+          if (item.created_at) parts.push(new Date(item.created_at).toLocaleString('uz-UZ'));
+          details.textContent = parts.join(' · ');
+          info.append(name, details); row.append(avatar, info); list.append(row);
+        });
+      }
+    } catch (error) {
+      put('#applicationsCount','—'); showError('#applicationsStatus',error);
+      $('#applicationList').innerHTML = '<div class="empty-state error-note">Arizalarni o‘qib bo‘lmadi. applications jadvali va RLS SELECT ruxsatini tekshiring.</div>';
+    }
+
+    try {
+      const {count, error} = await client.from('schedule_items').select('id', {count:'exact', head:true});
+      if (error) throw error;
+      put('#scheduleCount', count ?? 0);
+      put('#scheduleStatus', 'Jadval yozuvlari: ' + (count ?? 0));
+    } catch (error) {
+      put('#scheduleCount','—'); showError('#scheduleStatus',error);
+    }
+    put('#notice','Ko‘rsatkichlar bazadagi mavjud ma’lumot va Supabase RLS ruxsatlariga bog‘liq. Grafik hozircha namunaviy.');
+  }
+
+  $('#logout')?.addEventListener('click', async () => {
+    try {
+      const config = window.SUFIOLLOHYOR_CONFIG;
+      if (window.supabase && config?.SUPABASE_URL && config?.SUPABASE_ANON_KEY) {
+        const client = window.supabase.createClient(config.SUPABASE_URL, config.SUPABASE_ANON_KEY);
+        const {error} = await client.auth.signOut();
+        if (error) throw error;
+      }
+      location.href = 'login.html';
+    } catch (error) {
+      alert('Chiqishda xatolik: ' + errText(error));
+    }
+  });
+
+  loadDashboard();
+})();
+</script>
+</body>
+</html>
